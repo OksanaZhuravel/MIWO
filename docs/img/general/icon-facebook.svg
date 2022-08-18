@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-facebook</title>
+    <g id="Page-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MIWO-Copy" transform="translate(-1103.000000, -4759.000000)" fill="#FDFDFD" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(1031.000000, 4616.000000)">
+                <g id="icon-facebook" transform="translate(72.000000, 143.000000)">
+                    <path d="M24,0 C10.746,0 0,10.746 0,24 C0,37.254 10.746,48 24,48 C37.254,48 48,37.254 48,24 C48,10.746 37.254,0 24,0 Z M30,16 L27.3,16 C26.224,16 26,16.442 26,17.556 L26,20 L30,20 L29.582,24 L26,24 L26,38 L20,38 L20,24 L16,24 L16,20 L20,20 L20,15.384 C20,11.846 21.862,10 26.058,10 L30,10 L30,16 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -231,6 +231,7 @@ h6 {
 }
 
 .button--main {
+  max-width: 9.625rem;
   border: solid 1px #fdfdfd;
   color: #0c6ced;
   background-color: #fdfdfd;
@@ -733,14 +734,6 @@ body::after {
   padding: 0.75rem;
   display: -ms-grid;
   display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.box__content {
-  padding: 0.75rem;
 }
 
 .box__title:not(:last-child) {
@@ -959,7 +952,7 @@ body::after {
 
 .main__image img {
   max-width: 100%;
-  max-height: 683px;
+  max-height: 42.6875rem;
 }
 
 .main__wrap {
@@ -1100,7 +1093,7 @@ body::after {
 }
 
 .work__container {
-  padding: 3.875rem 0 5.6875rem 0;
+  padding: 3.125rem 0 5.6875rem 0;
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -1145,6 +1138,7 @@ body::after {
   content: "0" counter(myCount);
   font-family: "Gilroy";
   font-size: 2.375rem;
+  font-weight: 700;
   position: absolute;
   top: 1.25rem;
   color: #fdfdfd;
@@ -1197,8 +1191,17 @@ body::after {
   justify-items: start;
 }
 
+.benefits .box__content {
+  padding: 5.625rem 0 0 0;
+}
+
 .benefits .box__title:not(:last-child) {
   margin-bottom: 2.25rem;
+}
+
+.benefits__image img {
+  max-width: 100%;
+  max-height: 25.875rem;
 }
 
 .benefits__button {
@@ -1209,8 +1212,25 @@ body::after {
   background-color: #f7f7f7;
 }
 
+.additional .box__content {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  padding: 3.125rem 0 0 0;
+}
+
 .additional .box__title:not(:last-child) {
   margin-bottom: 3.3125rem;
+}
+
+.additional__image {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.additional__image img {
+  max-width: 100%;
 }
 
 .additional__button {
@@ -1221,15 +1241,15 @@ body::after {
   background-color: #ffffff;
 }
 
-@supports (padding-top: clamp( 1.5rem , -0.9222936763rem  +  12.1114683816vw , 8.5625rem )) {
+@supports (padding-top: clamp( 1.5rem , -0.129153269rem  +  8.1457663451vw , 6.25rem )) {
   .about {
-    padding-top: clamp( 1.5rem , -0.9222936763rem  +  12.1114683816vw , 8.5625rem );
+    padding-top: clamp( 1.5rem , -0.129153269rem  +  8.1457663451vw , 6.25rem );
   }
 }
 
-@supports not (padding-top: clamp( 1.5rem , -0.9222936763rem  +  12.1114683816vw , 8.5625rem )) {
+@supports not (padding-top: clamp( 1.5rem , -0.129153269rem  +  8.1457663451vw , 6.25rem )) {
   .about {
-    padding-top: calc(1.5rem + 7.0625 * (100vw - 20rem) / 58.3125);
+    padding-top: calc(1.5rem + 4.75 * (100vw - 20rem) / 58.3125);
   }
 }
 
@@ -1286,7 +1306,7 @@ body::after {
 }
 
 .about__button {
-  margin-top: 2.5rem;
+  margin-top: 3.4375rem;
 }
 
 @media (min-width: 47.99875em) {
@@ -1392,6 +1412,38 @@ body::after {
     grid-template-columns: 1fr 1fr;
   }
 
+  .benefits .box__container {
+    padding: 3.5rem 1.5rem 2.8125rem 1.5rem;
+    -ms-grid-columns: 20.125rem 1fr;
+    grid-template-columns: 20.125rem 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefits__image img {
+    max-height: none;
+  }
+
+  .additional .box__container {
+    padding: 5.625rem 1.5rem 2.8125rem 1.5rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .additional .box__content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .additional__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
   .about__container {
     padding: 1.5rem 1.5rem 1.5rem 13.125rem;
   }
@@ -1459,7 +1511,7 @@ body::after {
 
   .footer__container {
     gap: 5.25rem;
-    padding: 10.5rem 10.8125rem 12.125rem 13.0625rem;
+    padding: 11.25rem 10.8125rem 12.125rem 13.0625rem;
   }
 
   .footer__title {
@@ -1488,7 +1540,7 @@ body::after {
   }
 
   .main__wrap {
-    padding: 5.4375rem 0 4.625rem 0;
+    padding: 6.25rem 0 4.625rem 0;
     justify-items: start;
   }
 
@@ -1498,15 +1550,12 @@ body::after {
   }
 
   .benefits .box__container {
-    padding: 20px 210px 0 7.0625rem;
-    -ms-grid-columns: 1fr 36.875rem;
-    grid-template-columns: 1fr 36.875rem;
+    gap: 10rem;
   }
 
   .additional .box__container {
-    padding: 5rem 105px 0 209px;
-    -ms-grid-columns: 35.3125rem 1fr;
-    grid-template-columns: 35.3125rem 1fr;
+    padding: 3.125rem 0 0 6.875rem;
+    gap: 4.375rem;
   }
 
   .about__container {

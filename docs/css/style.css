@@ -855,12 +855,70 @@ body::after {
 .footer__container {
   position: relative;
   z-index: 2;
-  padding: 1.5rem;
   color: #fdfdfd;
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  gap: 1.5rem;
+}
+
+@supports (padding-top: clamp( 1.5rem , -1.8440514469rem  +  16.7202572347vw , 11.25rem )) {
+  .footer__container {
+    padding-top: clamp( 1.5rem , -1.8440514469rem  +  16.7202572347vw , 11.25rem );
+  }
+}
+
+@supports not (padding-top: clamp( 1.5rem , -1.8440514469rem  +  16.7202572347vw , 11.25rem )) {
+  .footer__container {
+    padding-top: calc(1.5rem + 9.75 * (100vw - 20rem) / 58.3125);
+  }
+}
+
+@supports ( padding-bottom: clamp( 1.5rem , -2.1441586281rem  +  18.2207931404vw , 12.125rem )) {
+  .footer__container {
+    padding-bottom: clamp( 1.5rem , -2.1441586281rem  +  18.2207931404vw , 12.125rem );
+  }
+}
+
+@supports not ( padding-bottom: clamp( 1.5rem , -2.1441586281rem  +  18.2207931404vw , 12.125rem )) {
+  .footer__container {
+    padding-bottom: calc(1.5rem + 10.625 * (100vw - 20rem) / 58.3125);
+  }
+}
+
+@supports (padding-right: clamp( 1.5rem , -1.6939978564rem  +  15.9699892819vw , 10.8125rem )) {
+  .footer__container {
+    padding-right: clamp( 1.5rem , -1.6939978564rem  +  15.9699892819vw , 10.8125rem );
+  }
+}
+
+@supports not (padding-right: clamp( 1.5rem , -1.6939978564rem  +  15.9699892819vw , 10.8125rem )) {
+  .footer__container {
+    padding-right: calc(1.5rem + 9.3125 * (100vw - 20rem) / 58.3125);
+  }
+}
+
+@supports (padding-left: clamp( 1.5rem , -2.4657020364rem  +  19.8285101822vw , 13.0625rem )) {
+  .footer__container {
+    padding-left: clamp( 1.5rem , -2.4657020364rem  +  19.8285101822vw , 13.0625rem );
+  }
+}
+
+@supports not (padding-left: clamp( 1.5rem , -2.4657020364rem  +  19.8285101822vw , 13.0625rem )) {
+  .footer__container {
+    padding-left: calc(1.5rem + 11.5625 * (100vw - 20rem) / 58.3125);
+  }
+}
+
+@supports (gap: clamp( 0.75rem , -0.7934083601rem  +  7.7170418006vw , 5.25rem )) {
+  .footer__container {
+    gap: clamp( 0.75rem , -0.7934083601rem  +  7.7170418006vw , 5.25rem );
+  }
+}
+
+@supports not (gap: clamp( 0.75rem , -0.7934083601rem  +  7.7170418006vw , 5.25rem )) {
+  .footer__container {
+    gap: calc(0.75rem + 4.5 * (100vw - 20rem) / 58.3125);
+  }
 }
 
 .footer__title {
@@ -881,6 +939,30 @@ body::after {
 @supports not (font-size: clamp( 1.75rem , 1.0640407288rem  +  3.4297963558vw , 3.75rem )) {
   .footer__title {
     font-size: calc(1.75rem + 2 * (100vw - 20rem) / 58.3125);
+  }
+}
+
+@supports (padding-right: clamp( 0.0000000625rem , -1.6934618668rem  +  8.4673096463vw , 4.9375rem )) {
+  .footer__title {
+    padding-right: clamp( 0.0000000625rem , -1.6934618668rem  +  8.4673096463vw , 4.9375rem );
+  }
+}
+
+@supports not (padding-right: clamp( 0.0000000625rem , -1.6934618668rem  +  8.4673096463vw , 4.9375rem )) {
+  .footer__title {
+    padding-right: calc(0.0000000625rem + 4.9374999375 * (100vw - 20rem) / 58.3125);
+  }
+}
+
+@supports (width: clamp( 17.5rem , 7.7250803859rem  +  48.8745980707vw , 46rem )) {
+  .footer__title {
+    width: clamp( 17.5rem , 7.7250803859rem  +  48.8745980707vw , 46rem );
+  }
+}
+
+@supports not (width: clamp( 17.5rem , 7.7250803859rem  +  48.8745980707vw , 46rem )) {
+  .footer__title {
+    width: calc(17.5rem + 28.5 * (100vw - 20rem) / 58.3125);
   }
 }
 
@@ -1135,12 +1217,12 @@ body::after {
 }
 
 .work__item::before {
-  content: "0" counter(myCount);
-  font-family: "Gilroy";
-  font-size: 2.375rem;
+  content: "Step " counter(myCount);
+  font-size: 1.875rem;
   font-weight: 700;
   position: absolute;
   top: 1.25rem;
+  text-transform: uppercase;
   color: #fdfdfd;
 }
 
@@ -1366,22 +1448,6 @@ body::after {
     }
 }
 
-  .footer__container {
-    padding: 5.25rem 3rem 6.0625rem 3rem;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .footer__title {
-    text-align: left;
-    padding-right: 1.5rem;
-  }
-
-  .footer__title::after {
-    content: "";
-  }
-
   .social__list {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1510,13 +1576,18 @@ body::after {
   }
 
   .footer__container {
-    gap: 5.25rem;
-    padding: 11.25rem 10.8125rem 12.125rem 13.0625rem;
+    -ms-grid-columns: 1fr minmax(-webkit-min-content, 1fr);
+    -ms-grid-columns: 1fr minmax(min-content, 1fr);
+    grid-template-columns: 1fr minmax(-webkit-min-content, 1fr);
+    grid-template-columns: 1fr minmax(min-content, 1fr);
   }
 
   .footer__title {
-    width: 46rem;
-    padding-right: 4.9375rem;
+    text-align: left;
+  }
+
+  .footer__title::after {
+    content: "";
   }
 
   .main__wrapper {

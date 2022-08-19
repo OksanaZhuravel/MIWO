@@ -201,26 +201,29 @@ h6 {
 }
 
 .button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  border-radius: 30px;
+  width: 11.875rem;
+  background-color: transparent;
+  padding: 1.1875rem 2.0625rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1.1875rem 2.0625rem;
-  border-radius: 30px;
-  border: 1px solid transparent;
-  text-align: center;
-  color: #0c6ced;
   background-color: #6957ff;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(-2%, #36b3ff), to(#6a19fe));
   background-image: -o-linear-gradient(left, #36b3ff -2%, #6a19fe);
   background-image: linear-gradient(to right, #36b3ff -2%, #6a19fe);
   color: #ffffff;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 
 .button._fw {
@@ -236,6 +239,24 @@ h6 {
 
 .button__text {
   font-size: 1.1875rem;
+}
+
+.button__wrap {
+  position: relative;
+  width: 11.875rem;
+}
+
+.button__wrap::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-2%, #36b3ff), to(#6a19fe));
+  background: -o-linear-gradient(left, #36b3ff -2%, #6a19fe);
+  background: linear-gradient(to right, #36b3ff -2%, #6a19fe);
+  border-radius: 30px;
 }
 
 input[type=text],
@@ -946,7 +967,6 @@ body::after {
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   position: relative;
-  z-index: 2;
   min-height: 30.3125rem;
   color: #fdfdfd;
   padding: 0.625rem;
@@ -1278,6 +1298,7 @@ body::after {
   .main__wrap {
     padding-top: 4.1875rem;
     justify-items: end;
+    z-index: 2;
   }
 
   .about__container {
@@ -1504,8 +1525,7 @@ body::after {
 @media (any-hover: hover) {
   .button:hover {
     color: #0c6ced;
-    border-color: #0c6ced;
-    background-color: transparent;
+    background-color: #ffffff;
     background-image: none;
   }
 
@@ -1516,10 +1536,8 @@ body::after {
     border-color: #ffffff;
   }
 
-  .popup__close:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+  .popup__close:hover::after {
+    background: url("../img/general/close__btn-color.svg") center/contain no-repeat;
   }
 
   .popup__link:hover {

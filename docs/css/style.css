@@ -788,27 +788,27 @@ body::after {
 }
 
 ._anim-show {
-  -webkit-transform: translate(120%, 0px);
-      -ms-transform: translate(120%, 0px);
-          transform: translate(120%, 0px);
+  -webkit-transform: translate(0, 120%);
+      -ms-transform: translate(0, 120%);
+          transform: translate(0, 120%);
   opacity: 0;
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  -webkit-transition: all 1s ease 0.3s;
+  -o-transition: all 1s ease 0.3s;
+  transition: all 1s ease 0.3s;
 }
 
 ._anim-show._active {
   opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 ._active ._anim-show {
   opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .header {
@@ -1231,7 +1231,7 @@ body::after {
 }
 
 .work__container {
-  padding: 3.1875rem 1.5rem 3rem 1.5rem;
+  padding: 1.9375rem 1.5rem 3rem 1.5rem;
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -1500,13 +1500,13 @@ body::after {
 }
 
 @supports (margin-bottom: clamp( 3.3125rem , 3.2591116173rem  +  0.2277904328vw , 3.4375rem )) {
-  .about__text:last-child {
+  .about__text--bold {
     margin-bottom: clamp( 3.3125rem , 3.2591116173rem  +  0.2277904328vw , 3.4375rem );
   }
 }
 
 @supports not (margin-bottom: clamp( 3.3125rem , 3.2591116173rem  +  0.2277904328vw , 3.4375rem )) {
-  .about__text:last-child {
+  .about__text--bold {
     margin-bottom: calc(3.3125rem + 0.125 * (100vw - 23.4375rem) / 54.875);
   }
 }
@@ -1920,6 +1920,11 @@ body::after {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+  }
+
+  .about__title {
+    display: -ms-grid;
+    display: grid;
   }
 }
 

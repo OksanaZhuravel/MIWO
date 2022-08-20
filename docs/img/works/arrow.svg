@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <defs>
+        <linearGradient x1="-1.63113318%" y1="55.0020106%" x2="100%" y2="55.0020106%" id="linearGradient-1">
+            <stop stop-color="#36B3FF" offset="0%"></stop>
+            <stop stop-color="#6A19FE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(-52.000000, -1671.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M72.2857143,1713 L72.2857143,1692.21429 L53.5714286,1673.71429 L53.5714286,1684.07143 L52,1684.07143 L52,1671 L65.1428571,1671 L65.1428571,1672.57143 L54.7142857,1672.57143 L73.8571429,1691.5 L73.8571429,1713 L72.2857143,1713 Z M77.9285714,1688.14286 L76.8571429,1687 L91.2857143,1672.57143 L80.9285714,1672.57143 L80.9285714,1671 L94,1671 L94,1684.07143 L92.4285714,1684.07143 L92.4285714,1673.71429 L77.9285714,1688.14286 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

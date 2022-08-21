@@ -678,9 +678,6 @@ body::after {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
 }
 
 .form__buttons {
@@ -1520,6 +1517,12 @@ body::after {
 @media (min-width: 47.99875em) {
   .popup__content {
     padding: 3rem 3rem;
+  }
+
+  .form__inner {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
   }
 
   .box__content {

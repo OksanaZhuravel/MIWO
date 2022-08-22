@@ -6,48 +6,47 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20220821125931">
-	<!-- <link rel="icon" href="img/general/favicon.svg" type="image/svg+xml"> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220822133705">
+	<link rel="icon" href="img/general/logo.svg" type="image/svg+xml">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- <script>
-     (function (w, d, s, l, i) {
-       w[l] = w[l] || [];
-       w[l].push({
-         'gtm.start': new Date().getTime(),
-         event: 'gtm.js'
-       });
-       var f = d.getElementsByTagName(s)[0],
-         j = d.createElement(s),
-         dl = l != 'dataLayer' ? '&l=' + l : '';
-       j.async = true;
-       j.src =
-         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-       f.parentNode.insertBefore(j, f);
-     })(window, document, 'script', 'dataLayer', 'GTM-NGSW8LF');
-   </script> -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NGSW8LF');
+	</script>
 
 </head>
 
 <body>
-	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGSW8LF" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript> -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGSW8LF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<nav class="header__menu menu">
+				<nav class="header__menu menu" id="menu">
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a data-goto=".work" href="" class="menu__link">How It&nbsp;Works</a>
+							<a data-goto="#work" href="" class="menu__link">How It&nbsp;Works</a>
 						</li>
 						<li class="menu__item">
-							<a data-goto=".benefits" href="" class="menu__link">Your Benefits</a>
+							<a data-goto="#benefits" href="" class="menu__link">Your Benefits</a>
 						</li>
 						<li class="menu__item">
-							<a data-goto=".additional" href="" class="menu__link">Additional Benefits</a>
+							<a data-goto="#additional" href="" class="menu__link">Additional Benefits</a>
 						</li>
 						<li class="menu__item">
-							<a data-goto=".about" href="" class="menu__link">About</a>
+							<a data-goto="#about" href="" class="menu__link">About</a>
 						</li>
 					</ul>
 				</nav>
@@ -76,7 +75,6 @@
 					</div>
 				</div>
 			</section>
-
 			<section class="page-slogan slogan">
 				<div class="slogan__container">
 					<h2 class="slogan__title">Get account with several virtual cards available for you and your relatives in
@@ -280,9 +278,8 @@
 				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__text">
 					<div class="form">
-						<form data-dev class="form__boby" id="form" data-popup-message="#form-message">
-							<!-- <form data-ajax method="POST" action="sendmail.php" class="form__boby" id="form"
-              data-popup-message="#form-message"> -->
+						<!-- <form data-dev class="form__boby" id="form" data-popup-message="#form-message"> -->
+						<form data-ajax method="POST" action="sendmail.php" class="form__boby" id="form" data-popup-message="#form-message">
 							<h2 class="form__title">
 								Thank you for your interest in&nbsp;MIWO service!</h2>
 							<p class="form__text">
@@ -374,7 +371,7 @@
     </div>
   </div>
 </div> -->
-	<script src="js/app.min.js?_v=20220821125931"></script>
+	<script src="js/app.min.js?_v=20220822133705"></script>
 </body>
 
 </html>

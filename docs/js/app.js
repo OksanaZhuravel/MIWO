@@ -579,29 +579,37 @@
         }
         function stickyBlockItem(stickyParent, stickyConfig) {
             const stickyBlockItem = stickyParent.querySelector("[data-sticky-item]");
+            console.log(stickyBlockItem);
             const headerHeight = stickyConfig.header;
             const offsetTop = headerHeight + stickyConfig.top;
             const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
             document.addEventListener("windowScroll", stickyBlockActions);
             function stickyBlockActions(e) {
                 const endPoint = stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
-                let stickyItemValues = {};
+                let stickyItemValues = {
+                    position: "relative",
+                    bottom: "auto",
+                    top: "auto",
+                    right: "5px"
+                };
                 if (!stickyConfig.media || stickyConfig.media < window.innerWidth) if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) if (scrollY >= startPoint && scrollY <= endPoint) {
                     stickyItemValues.position = `fixed`;
                     stickyItemValues.bottom = `auto`;
                     stickyItemValues.top = `${offsetTop}px`;
-                    stickyItemValues.right = `${stickyBlockItem.getBoundingClientRect().left}px`;
+                    stickyItemValues.right = `5px`;
+                    stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
                 } else if (scrollY >= endPoint) {
                     stickyItemValues.position = `absolute`;
                     stickyItemValues.bottom = `${stickyConfig.bottom}px`;
                     stickyItemValues.top = `auto`;
-                    stickyItemValues.right = `0px`;
+                    stickyItemValues.right = `5px`;
+                    stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
                 }
                 stickyBlockType(stickyBlockItem, stickyItemValues);
             }
         }
         function stickyBlockType(stickyBlockItem, stickyItemValues) {
-            stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`;
+            stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};right:${stickyItemValues.right};width:${stickyItemValues.width};`;
         }
         stickyBlockInit();
     }

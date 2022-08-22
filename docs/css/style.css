@@ -936,13 +936,13 @@ body::after {
   }
 }
 
-@supports ( padding-bottom: clamp( 3rem , -0.8973519362rem  +  16.6287015945vw , 12.125rem )) {
+@supports (padding-bottom: clamp( 3rem , -0.8973519362rem  +  16.6287015945vw , 12.125rem )) {
   .footer__container {
     padding-bottom: clamp( 3rem , -0.8973519362rem  +  16.6287015945vw , 12.125rem );
   }
 }
 
-@supports not ( padding-bottom: clamp( 3rem , -0.8973519362rem  +  16.6287015945vw , 12.125rem )) {
+@supports not (padding-bottom: clamp( 3rem , -0.8973519362rem  +  16.6287015945vw , 12.125rem )) {
   .footer__container {
     padding-bottom: calc(3rem + 9.125 * (100vw - 23.4375rem) / 54.875);
   }
@@ -1913,6 +1913,8 @@ body::after {
 
   .menu-open .menu .menu__link {
     color: #f7f7f7;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 
   .icon-menu {

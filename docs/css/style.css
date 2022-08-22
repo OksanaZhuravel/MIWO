@@ -1089,6 +1089,10 @@ body::after {
   background-image: linear-gradient(90deg, #4383fb 25%, #6822fe 75%);
 }
 
+.main__web img {
+  max-width: 100%;
+}
+
 .main__image {
   display: none;
   position: absolute;
@@ -1136,6 +1140,7 @@ body::after {
   font-family: "Gilroy";
   line-height: 1.14;
   font-weight: 700;
+  position: relative;
 }
 
 @supports (font-size: clamp( 2.75rem , 1.9224800683rem  +  3.5307517084vw , 4.6875rem )) {
@@ -1148,10 +1153,6 @@ body::after {
   .main__title {
     font-size: calc(2.75rem + 1.9375 * (100vw - 23.4375rem) / 54.875);
   }
-}
-
-.main__title:not(:last-child) {
-  margin-bottom: 2.6875rem;
 }
 
 .main__subtitle {
@@ -1629,6 +1630,15 @@ body::after {
 
   .main__wrapper {
     padding: 0.625rem;
+  }
+
+  .main__wrapper::before {
+    content: "";
+    background: none;
+  }
+
+  .main__web {
+    display: none;
   }
 
   .main__image {

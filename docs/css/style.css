@@ -448,7 +448,7 @@ body::after {
   background: -webkit-gradient(linear, left top, right top, color-stop(-2%, #36b3ff), to(#6a19fe));
   background: -o-linear-gradient(left, #36b3ff -2%, #6a19fe);
   background: linear-gradient(to right, #36b3ff -2%, #6a19fe);
-  border-radius: 30px;
+  border-radius: 32px;
 }
 
 .popup__content {
@@ -876,6 +876,7 @@ body::after {
           flex-flow: column wrap;
   row-gap: 1.5rem;
   color: #0c6ced;
+  margin-top: 1.5rem;
 }
 
 .menu__link::after {
@@ -1531,6 +1532,10 @@ body::after {
               column-gap: calc(1.5625rem + 2.5625 * (100vw - 23.4375rem) / 54.875);
     }
 }
+
+  .menu__list {
+    margin-top: 0;
+  }
 
   .footer__title {
     line-height: 1.17;
